@@ -2152,3 +2152,15 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 818ms (Views: 804.7ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/posts/1" for 108.44.160.143 at 2020-01-31 20:54:56 +0000
+Cannot render console from 108.44.160.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1):
+  
+app/controllers/posts_controller.rb:8:in `show'
